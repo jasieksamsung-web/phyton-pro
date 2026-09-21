@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Therianowo</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/Therianowo.css') }}">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="logo">
+            Pringels_The_Therian
+        </div>
+
+        <div class="przycisk">
+            <a href="{{ url_for('static', filename='Therian_Photos.html') }}"
+               target="_blank"
+               class="przycisk-nawigacji">
+                Zobacz zdjęcia therian
+            </a>
+        </div>
+
+        <div class="video">
+            <video width="600" controls>
+                <source
+                    src="{{ url_for('static', filename='video/Therianowo.mp4') }}"
+                    type="video/mp4">
+
+                Film nie został znaleziony lub wystąpił błąd połączenia.
+            </video>
+        </div>
+
+        <div class="obrazek">
+            <img
+                src="{{ url_for('static', filename='images/Mysticat.png') }}"
+                alt="O nie... Therian Nie Wrócił"
+                width="400">
+        </div>
+
+        <div class="autor">
+            Pringels & Silly_Fluffy_Loaf<br>
+            Copyright
+        </div>
+
+    </div>
+
+</body>
+</html>
+
