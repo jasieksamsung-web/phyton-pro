@@ -8,7 +8,11 @@ def hello_world():
 
 @app.route("/femboy")
 def hello_femboy():
-    return render_template("Therianowo.html")
+    return render_template("Femboy.html")
+
+@app.route("/Therian_Photos")
+def hello_therian_photos():
+    return render_template("Therian_Photos.html")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True) 
