@@ -1,10 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,redirect, url_for
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return redirect(url_for('hello_femboy'))
 
 @app.route("/femboy")
 def hello_femboy():
@@ -16,3 +16,4 @@ def hello_therian_photos():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True) 
+    

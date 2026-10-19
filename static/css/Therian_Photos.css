@@ -1,0 +1,84 @@
+:root {
+  --bg-color: #D1F5FF;
+  --btn-bg: #78E3FD;
+  --btn-bg-hover: #7D53DE;
+  --btn-border: #34F6F2;
+  --font-main: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Układ Siatki */
+.main {
+  display: grid;
+  grid-template-areas:
+    "logo     logo"
+    "sidebar  content"
+    "autor    autor";
+  grid-template-columns: 250px 1fr; /* Lewy panel 250px, reszta miejsca po prawej */
+  gap: 20px;
+}
+
+/* Górny napis - Tytuł / Logo */
+.logo {
+  grid-area: logo;
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+/* Lewy panel z prostokątami (obrazek, przycisk, video itp.) */
+.sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Odstęp między ramkami */
+}
+
+/* Elementy w lewym panelu (czarne ramki jak na szkicu) */
+.box {
+  border: 4px solid #000000;
+  background-color: #ffffff;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Przycisk dostosowany z Twojego kodu */
+.przycisk-nawigacji {
+  display: block;
+  padding: 12px 24px;
+  background-color: var(--btn-bg);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 2px solid var(--btn-border);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.przycisk-nawigacji:hover {
+  background-color: var(--btn-bg-hover);
+  transform: translateY(-3px);
+}
+
+/* Główna treść po prawej stronie */
+.content {
+  grid-area: content;
+  /* Miejsce na cokolwiek po prawej stronie */
+}
+
+/* Dolny napis - Twórcy */
+.autor {
+  grid-area: autor;
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 20px;
+}
